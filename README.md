@@ -8,10 +8,27 @@ The first step that was taken into account is the realization of the requirement
 
 ## Grain table
 
-| **First Name** | **Last Name** | **Email** | **Application Date = Day, month, year** | **Country** | 
-|:--------------:|:-------------:|:---------:|:--------------------------------------:|:-----------:|
-| <span style="background-color: F54927">YOE</span> | <span style="background-color: #90EE90">Seniority</span> | <span style="background-color: #FFFF00">Technology</span> | <span style="background-color: #FF6347">Approved by the Code Challenge</span> | <span style="background-color: #FF69B4">Approved by the Technical Interview</span> | 
-| <span style="background-color: #FF6347">Approved in both tests</span> | <span style="background-color: #FF6347">Code Challenge Score</span> | <span style="background-color: #FF6347">Technical Interview Score</span> |
+<table>
+  <tr>
+    <th style="background-color: #00FFFF">First Name</th>
+    <th style="background-color: #00FFFF">Last Name</th>
+    <th style="background-color: #00FFFF">Email</th>
+    <th style="background-color: #FF6347">Application Date = Day, month, year</th>
+    <th style="background-color: #00FFFF">Country</th>
+  </tr>
+  <tr>
+    <td style="background-color: #00FFFF">YOE</td>
+    <td style="background-color: #90EE90">Seniority</td>
+    <td style="background-color: #FFFF00">Technology</td>
+    <td style="background-color: #FF6347">Approved by the Code Challenge</td>
+    <td style="background-color: #FF6347">Approved by the Technical Interview</td>
+  </tr>
+  <tr>
+    <td style="background-color: #FF6347">Approved in both tests</td>
+    <td style="background-color: #FF6347">Code Challenge Score</td>
+    <td style="background-color: #FF6347">Technical Interview Score</td>
+  </tr>
+</table>
 
 
 ## Table related to KPIs
