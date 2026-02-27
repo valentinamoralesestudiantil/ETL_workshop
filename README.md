@@ -1,6 +1,6 @@
 # ETL_workshop
 This repository contains the workshop development by Valentina Morales.
-# Desarrollo de caso
+# case development
 
 A company has a CSV file with 50,000 rows of candidate request data from technical selection processes where each row represents a candidate request. With this, we want to be able to generate analytical queries and key performance indicators so that they are easy to interpret.
 
