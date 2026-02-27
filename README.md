@@ -33,19 +33,36 @@ It also considered the dimension with which it was going to be related, the type
 | What is the percentage of hiring in the registered years? | Hiring percentage | Candidate | Pie chart | Allows the company to see how many of the registered candidates have been hired for passing the tests. This is representative because they estimate how the quality of the applicants is being to pass the proposed requirements and helps to optimize selection costs. |
 | What is the average year of experience of the people who were hired? | Average years of experience | Candidate | KPI Card | Allows the company to estimate the years of experience of the people who are hiring in order to evaluate the general level of experience of the contracted people, help balance the work teams and help in salary decisions. |
 
-This process resulted in the division into 5 dimensions because each of them is an essential source to answer the KPIs so the information can be obtained more easily in a more optimized way looking for the search and use to be as efficient as possible, resulting in a star-type dimensional data model that can be seen.
+This process resulted in the division into 5 dimensions because each of them is an essential source to answer the KPIs so the information can be obtained more easily in a more optimized way looking for the search and use to be as efficient as possible, resulting in a star-type dimensional data model That can be seen done in the MySQLWorkbench application.
 
 ![Dimensional Data Model](./Lab4/sql/dimensional_data_model.png)
 
-##libraries required for its use
+## Libraries required for its use
 
-1. 
-2. 
-3. 
-4.
-5.
-6.
-7.
-8.
-9.
-10.
+1. pandas
+2. Os
+3. Sqlalchemy
+4. datetime
+5. tabulate
+6. log
+7. streamlit
+
+## ETL process
+For the ETL process it consists of three parts:
+
+1. Extraction: In this process we will use the CSV "candides.csv" that will be stored in data/raw. This is the original dataset provided that will give us the preliminary information to perform the ETL process, in src/extracto.py the process of extracting the dataset data is carried out by taking all that raw data to be able to use them. For this part we would only need the Pandas bookstore.
+
+2. Transformation: This part will be in src/transform.py in it mainly the dimension tables will be made which in this case are 5 and also the fact table which is the main one in this case will be called application later the transformed data will be stored in the data/transformed folder where the different tables will be in csv files. For this part we would only need the Pandas bookstore.
+
+3. Load: This part will be in src/load.py where the loading process will be performed on the date werehause this by means of (engine = create_engine( f”mysql+pymysql: root:valemoravale@localhost:3306/recruitment_dw”)) this part carries the data from my work environment in MySQLWorkbench. In this case, several libraries will be needed which are: the OS library that is used to interact with the operating system; the sqlalchemy library that is used to facilitate communication between Python and relational databases and pandas.
+
+Other files that will be used are: 
+1. src/log.py where the logs will be generated that will allow you to see the executions and errors of the program in the logs folder as a text file, for this the datetime library will be needed
+
+2. src/main.py which is where the top-level code is executed for the panda libraries will be used, tabulated to make text tables, streamlit which is used to create interactive web applications and data visualizations quickly and log.
+
+In the main you will have to take into account the routes that are established which are:
+
+- log_file = r"/Users/valemoravale/Documents/UNIVERSIDAD /Semestre 5/ETL/Lab4/Python/logs/log_file.txt" Stores the logs
+- target_file = r"/Users/valemoravale/Documents/UNIVERSIDAD /Semestre 5/ETL/Lab4/Python/data/transformed” Stores the transformed data
+- data_path = r"/Users/valemoravale/Documents/UNIVERSIDAD /Semestre 5/ETL/Lab4/Python/data/raw/candidates.csv” Route where the raw dataset is
