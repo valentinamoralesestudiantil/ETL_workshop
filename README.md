@@ -13,10 +13,10 @@ The first step that was taken into account is the realization of the requirement
 | **Candidate dimension** | **First Name** | **Last Name** | **Email**|  **YOE**|
 | **Seniority dimension** | **Seniority**  |               |          |         |
 | **Country dimension**   | **Country**    |               |          |         |
-| **Date dimension**      | **Application Date = Day, month, year** | |          |         |
-|------------------------------------------------------------------------------------------|
+| **Date dimension**      | **Application Date = Day, month, year** | |         |         |
+|-------------------------|----------------|---------------|----------|---------|---------|
 |**Fact Table**|
-|------------------------------------------------------------------------------------------|
+|-------------------------|----------------|---------------|----------|---------|---------|
 | **Technical Interview Score**| **Approved by the Code Challenge** | **Approved by the Technical Interview** | **Approved in both tests** | **Code Challenge Score** |
 
 
