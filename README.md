@@ -36,3 +36,16 @@ It also considered the dimension with which it was going to be related, the type
 This process resulted in the division into 5 dimensions because each of them is an essential source to answer the KPIs so the information can be obtained more easily in a more optimized way looking for the search and use to be as efficient as possible, resulting in a star-type dimensional data model that can be seen.
 
 ![Dimensional Data Model](./Lab4/sql/dimensional_data_model.png)
+
+##libraries required for its use
+
+1. 
+2. 
+3. 
+4.
+5.
+6.
+7.
+8.
+9.
+10.
