@@ -46,6 +46,8 @@ This process resulted in the division into 5 dimensions because each of them is 
 5. tabulate
 6. log
 7. streamlit
+8. matplotlib.pyplot
+9. seaborn
 
 ## ETL process
 For the ETL process it consists of three parts:
@@ -66,3 +68,13 @@ In the main you will have to take into account the routes that are established w
 - log_file = r"/Users/valemoravale/Documents/UNIVERSIDAD /Semestre 5/ETL/Lab4/Python/logs/log_file.txt" Stores the logs
 - target_file = r"/Users/valemoravale/Documents/UNIVERSIDAD /Semestre 5/ETL/Lab4/Python/data/transformed” Stores the transformed data
 - data_path = r"/Users/valemoravale/Documents/UNIVERSIDAD /Semestre 5/ETL/Lab4/Python/data/raw/candidates.csv” Route where the raw dataset is
+
+## Bi process
+
+For this process, streamlit was used, which is an open source Python library designed to create interactive web applications and data visualizations quickly to be able to visualize the development of KPIs, first the bi/dw_connection.py folder was created where the connection was created with the date werehause that was created in MySQLWorkbench, in this case the mysql.connector library will be used and the data that will be provided are those of my MySQLWorkbench unit.
+
+To perform the visualizations (graphics) the src/streamlit_app.py folder was used where each of the SQL queries and the respective graph will be made using the Python streamlit library, these graphics will later be saved in the output folder in both CSV and PNG files to be displayed, the libraries that will be used will be streamlit, pandas, matplotlib.pyplot and seaborn.
+
+This can also be executed from the browser using the command in the terminal (streamlit run src/streamlit_app.py) after running all this will allow you to see all the graphics together.
+
+
