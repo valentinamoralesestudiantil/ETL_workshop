@@ -8,27 +8,12 @@ The first step that was taken into account is the realization of the requirement
 
 ## Grain table
 
-<table>
-  <tr>
-    <th style="background-color: #00FFFF">First Name</th>
-    <th style="background-color: #00FFFF">Last Name</th>
-    <th style="background-color: #00FFFF">Email</th>
-    <th style="background-color: #FF6347">Application Date = Day, month, year</th>
-    <th style="background-color: #00FFFF">Country</th>
-  </tr>
-  <tr>
-    <td style="background-color: #00FFFF">YOE</td>
-    <td style="background-color: #90EE90">Seniority</td>
-    <td style="background-color: #FFFF00">Technology</td>
-    <td style="background-color: #FF6347">Approved by the Code Challenge</td>
-    <td style="background-color: #FF6347">Approved by the Technical Interview</td>
-  </tr>
-  <tr>
-    <td style="background-color: #FF6347">Approved in both tests</td>
-    <td style="background-color: #FF6347">Code Challenge Score</td>
-    <td style="background-color: #FF6347">Technical Interview Score</td>
-  </tr>
-</table>
+| **Candidate dimension** | **First Name** | **Last Name** | **Email** | **YOE** |
+|-------------------------|----------------|---------------|----------|---------|
+| **Seniority dimension** | **Seniority**  |               |          |         |
+| **Country dimension**   | **Country**    |               |          |         |
+| **Date dimension**      | **Application Date = Day, month, year** | |          |         |
+| **Fact Table**          | **Approved by the Code Challenge** | **Approved by the Technical Interview** | **Approved in both tests** | **Code Challenge Score** | **Technical Interview Score** |
 
 
 ## Table related to KPIs
@@ -36,12 +21,15 @@ The first step that was taken into account is the realization of the requirement
 It was decided to create a table of facts called **Application** this will contain 5 attributes of which 3 of them will be created by me because they are not in the original database, this to supply the need to have specific data that in this case will be BOOLEAN to more easily answer the doubts that are presented in the KPIs where it is asked to recognize which are the candidates who were hired in addition to information related to their scores in the tests, following the approval standards of the company, the rest of these attributes will represent the scores obtained in the tests by the candidates.
 
 It also considered the dimension with which it was going to be related, the type of visualization and the justification of its commercial value for each of the KPIs to have a clearer knowledge of what was needed.
-| Requerimientos | KPIs | Dimensiones | Tipo de visualización | Justificación de su valor comercial |
-|----------------|------|-------------|-----------------------|------------------------------------|
-| Cuantas contrataciones hay por cada una de las tecnologías | Hires by Technology | Technology | Gráfico de barras | Permite ver a la empresa cuales son las tecnologías más demandadas por la empresa y las que mas tienen índice de contratación y cuales no |
-| Cuantas contrataciones hay por cada año | Hires by Year | Date | Gráfico de líneas | Permite ver a la empresa en que años se realizaron mas contrataciones y en cuales no para evaluar como va el crecimiento ademas de planificar un presupuesto |
-| Cuantas contrataciones hay según el nivel de Seniority | Hires by Seniority | Seniority | Gráfico de barras | Permite ver a la empresa que seniority de las tecnologías es el mas contratado y cual no para así controlar los salarios y medir si se esta invirtiendo mas en talento experimentado o formación interna en la empresa |
-| Cuantas contrataciones hay por cada país | Hires by Country over Years (Focus on USA, Brazil, Colombia, Ecuador) | Country | Gráfico de líneas múltiple | Permite ver a la empresa cuales son los países de donde mas personal fue contratado, esto permite analizar la expansión internacional y ver donde se debe priorizar el mercado |
-| Cual es el puntaje promedio obtenido por los candidatos en el Code Challenge | Average score of the Code Challenge | Candidate | KPI Card | Permite ver a la empresa cuales son los puntajes en promedio que obtienen los candidatos que se postulan, esto sirve para evaluar como esta siendo el desempeño en las pruebas y si los resultados obtenidos es mas alto o bajo de lo esperado así se identifican brechas de habilidades y la efectividad del proceso de selección |
-| Cual es el porcentaje de contratación en los años registrados | Hiring percentage | Candidate | Gráfico de torta | Permite ver a la empresa cuántos de los candidatos registrados han sido contratados para pasar las pruebas esto es representativo porque estiman como esta siendo la calidad de los postulantes para pasar los requerimientos propuestos y ayuda a optimizar costos de selección |
-| Cual es el promedio de años de experiencia de las personas que fueron contratadas | Average years of experience | Candidate | KPI Card | Permite estimar a la empresa cuales son los años de experiencia de las personas que están contratando para así evaluar el nivel general de experiencia de las personas contratadas, ayudar a equilibrar los equipos de trabajo y ayudar en decisiones salariales |
+
+| Requirements | KPIs | Dimensions | Visualization Type | Commercial Value Justification |
+|--------------|------|------------|--------------------|--------------------------------|
+| How many hirings are there for each of the technologies? | Hires by Technology | Technology | Bar chart | Allows the company to see which technologies are most demanded by the company and which ones have the highest hiring index. |
+| How many hires are there for each year? | Hires by Year | Date | Line graph | Allows the company to see in which years more hiring was made and in which not to evaluate how growth is going in addition to planning a budget. |
+| How many hires are there according to the Seniority level? | Hires by Seniority | Seniority | Bar graph | Allows the company to see which seniority of technologies is the most hired and which not in order to control salaries and measure if more is being invested in experienced talent or internal training in the company. |
+| How many hires are there for each country? | Hires by Country over Years (Focus on USA, Brazil, Colombia, Ecuador) | Country | Multiple line graph | Allows the company to see which are the countries from which most staff was hired, this allows to analyze international expansion and where the market should be prioritized. |
+| What is the average score obtained by the candidates in the Code Challenge? | Average score of the Code Challenge | Candidate | KPI Card | Allows the company to see what are the average scores obtained by the candidates who apply, this serves to evaluate how the performance in the tests is being and whether the results obtained are higher or lower than expected, thus identifying skills gaps and the effectiveness of the selection process. |
+| What is the percentage of hiring in the registered years? | Hiring percentage | Candidate | Pie chart | Allows the company to see how many of the registered candidates have been hired for passing the tests. This is representative because they estimate how the quality of the applicants is being to pass the proposed requirements and helps to optimize selection costs. |
+| What is the average year of experience of the people who were hired? | Average years of experience | Candidate | KPI Card | Allows the company to estimate the years of experience of the people who are hiring in order to evaluate the general level of experience of the contracted people, help balance the work teams and help in salary decisions. |
+
+periencia de las personas contratadas, ayudar a equilibrar los equipos de trabajo y ayudar en decisiones salariales |
