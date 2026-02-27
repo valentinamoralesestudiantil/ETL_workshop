@@ -36,6 +36,10 @@ ax_tech.set_title("Hires by Technology")
 # Añadir etiquetas con los valores de las barras
 ax_tech.bar_label(ax_tech.containers[0], fmt='%d', padding=5) 
 plt.tight_layout()  # Ajustar para que las etiquetas no se superpongan
+# Guardar el gráfico en la carpeta 'output'
+fig_tech.savefig('output/Hires by Technology.png')
+# Guardar los datos en un archivo CSV
+df_tech.to_csv('output/hires_by_technology.csv', index=False)
 st.pyplot(fig_tech)
 
 # Consulta 2: Contrataciones por Año
@@ -56,6 +60,10 @@ sns.lineplot(x="year", y="hires", data=df_year, ax=ax_year, marker="o")
 ax_year.set_title("Hires by Year")
 ax_year.set_xticks(df_year['year'])  # Establecer los valores del eje X como los años
 ax_year.set_xticklabels(df_year['year'].astype(int))  # Mostrar solo los años enteros
+# Guardar el gráfico en la carpeta 'output'
+fig_year.savefig('output/Hires by Year.png')
+# Guardar los datos en un archivo CSV
+df_year.to_csv('output/hires_by_year.csv', index=False)
 st.pyplot(fig_year)
 
 # Consulta 3: Contrataciones por Nivel de Seniority
@@ -78,7 +86,10 @@ ax_seniority.set_xlim(0, 1200)  # Cambia el límite superior del eje X
 ax_seniority.bar_label(ax_seniority.containers[0], fmt='%d', padding=8, label_type='edge')
 # Ajustar el espacio para que las etiquetas no se superpongan
 plt.tight_layout()
-
+# Guardar el gráfico en la carpeta 'output'
+fig_seniority.savefig('output/Hires by Seniority.png')
+# Guardar los datos en un archivo CSV
+df_seniority.to_csv('output/hires_by_seniority.csv', index=False)
 st.pyplot(fig_seniority)
 
 
@@ -99,6 +110,10 @@ st.subheader("Hires by Country over Years (Focus on USA, Brazil, Colombia, Ecuad
 fig_country, ax_country = plt.subplots()
 sns.lineplot(x="country", y="hires", data=df_country, ax=ax_country, marker="o")
 ax_country.set_title("Hires by Country")
+# Guardar el gráfico en la carpeta 'output'
+fig_country.savefig('output/Hires by Country over Years.png')
+# Guardar los datos en un archivo CSV
+df_country.to_csv('output/hires_by_country.csv', index=False)
 st.pyplot(fig_country)
 
 # Consulta 5: Puntaje Promedio del Code Challenge
@@ -140,6 +155,9 @@ st.markdown(f"""
     </div>
 """, unsafe_allow_html=True)
 
+# Guardar en el archivo CSV en la carpeta 'output/'
+df_avg_score.to_csv('output/avg_code_challenge_score.csv', index=False)
+
 # Consulta 6: Porcentaje de Contratación por Año
 query_hiring_percentage = """
 SELECT d.year, 
@@ -156,6 +174,10 @@ st.subheader("Hiring percentage")
 fig_hiring, ax_hiring = plt.subplots()
 ax_hiring.pie(df_hiring_percentage['hiring_percentage'], labels=df_hiring_percentage['year'], autopct='%1.1f%%')
 ax_hiring.set_title("Hires Percentage by Year")
+# Guardar el gráfico en la carpeta 'output'
+fig_hiring.savefig('output/Hiring percentage.png')
+# Guardar los datos en un archivo CSV
+df_hiring_percentage.to_csv('output/hiring_percentage.csv', index=False)
 st.pyplot(fig_hiring)
 
 # Consulta 7: Promedio de Años de Experiencia de los Contratados
@@ -197,5 +219,7 @@ st.markdown(f"""
         <div class="value">{avg_experience:.2f} years</div>
     </div>
 """, unsafe_allow_html=True)
+# Guardar en el archivo CSV en la carpeta 'output/'
+df_avg_experience.to_csv('output/avg_years_of_experience.csv', index=False)
 
 
