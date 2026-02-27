@@ -1,1 +1,59 @@
+CREATE DATABASE recruitment_dw;
+USE recruitment_dw;
 
+CREATE TABLE dim_country (
+    country_key INT AUTO_INCREMENT PRIMARY KEY,
+    country VARCHAR(100) NOT NULL
+);
+
+CREATE TABLE dim_seniority (
+    seniority_key INT AUTO_INCREMENT PRIMARY KEY,
+    seniority VARCHAR(100) NOT NULL
+);
+
+CREATE TABLE dim_technology (
+    technology_key INT AUTO_INCREMENT PRIMARY KEY,
+    technology VARCHAR(100) NOT NULL
+);
+
+CREATE TABLE dim_date (
+    date_key INT AUTO_INCREMENT PRIMARY KEY,
+    day INT NOT NULL,
+    month INT NOT NULL,
+    year INT NOT NULL
+);
+
+CREATE TABLE dim_candidate (
+    candidate_key INT AUTO_INCREMENT PRIMARY KEY,
+    first_name VARCHAR(100) NOT NULL,
+    last_name VARCHAR(100) NOT NULL,
+    email VARCHAR(100) NOT NULL,
+    yoe INT
+);
+
+CREATE TABLE fact_application(
+    application_key INT AUTO_INCREMENT PRIMARY KEY,
+    
+    -- Foreign Keys
+    date_key INT,
+    country_key INT,
+    seniority_key INT,
+    technology_key INT,
+    candidate_key INT,
+    
+    -- Métricas
+    code_challenge_score INT,
+    technical_interview_score INT,
+    approved_by_the_code_challenge BOOLEAN,
+    approved_by_the_technical_interview BOOLEAN,
+    approved_in_both_tests BOOLEAN,
+    
+    -- Relaciones
+    FOREIGN KEY (date_key) REFERENCES dim_date(date_key),
+    FOREIGN KEY (country_key) REFERENCES dim_country(country_key),
+    FOREIGN KEY (seniority_key) REFERENCES dim_seniority(seniority_key),
+    FOREIGN KEY (technology_key) REFERENCES dim_technology(technology_key),
+    FOREIGN KEY (candidate_key) REFERENCES dim_candidate(candidate_key)
+    
+
+);
