@@ -33,4 +33,3 @@ It also considered the dimension with which it was going to be related, the type
 | What is the percentage of hiring in the registered years? | Hiring percentage | Candidate | Pie chart | Allows the company to see how many of the registered candidates have been hired for passing the tests. This is representative because they estimate how the quality of the applicants is being to pass the proposed requirements and helps to optimize selection costs. |
 | What is the average year of experience of the people who were hired? | Average years of experience | Candidate | KPI Card | Allows the company to estimate the years of experience of the people who are hiring in order to evaluate the general level of experience of the contracted people, help balance the work teams and help in salary decisions. |
 
-periencia de las personas contratadas, ayudar a equilibrar los equipos de trabajo y ayudar en decisiones salariales |
