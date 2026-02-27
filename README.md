@@ -8,8 +8,9 @@ The first step that was taken into account is the realization of the requirement
 
 ## Grain table
 
-| **Candidate dimension** | **First Name** | **Last Name** | **Email** | **YOE** |
+
 |-------------------------|----------------|---------------|----------|---------|
+| **Candidate dimension** | **First Name** | **Last Name** | **Email**|  **YOE**|
 | **Seniority dimension** | **Seniority**  |               |          |         |
 | **Country dimension**   | **Country**    |               |          |         |
 | **Date dimension**      | **Application Date = Day, month, year** | |          |         |
